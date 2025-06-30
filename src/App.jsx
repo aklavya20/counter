@@ -33,13 +33,13 @@ const App = () => {
           <div>userData.address.city</div>
           <div>userData.address.zipcode</div>
         </>
-      )} */}
-      {/* <Child getData={getData} /> */}
-      {/* <Comments /> */}
-      {/* <Comments />
-      <Counter /> */}
-      {/* <Parent /> */}
-      {/* <Parent1 /> */}
+      )} 
+    <Child getData={getData} /> 
+      <Comments /> 
+     <Comments />
+      <Counter /> 
+       <Parent /> 
+       <Parent1 /> */}
       <Search />
     </div>
   );
