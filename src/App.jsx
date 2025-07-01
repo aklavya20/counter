@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 // import Counter from "./counter";
 // import Comments from "./comments";
-// import Child from "./child";
+import Child from "./Child";
 // import Parent from "./Parent";
 // import Parent1 from "./Parent1";
 import Search from "./Search";
 
 const App = () => {
-  // function getData(data) {
-  //   console.log(data);
-  // }
+  function getData(data) {
+    console.log(data);
+  }
   // const [userData, setUserData] = useState("");
   // useEffect(() => {
   //   async function fetchUrl() {
@@ -34,12 +34,13 @@ const App = () => {
           <div>userData.address.zipcode</div>
         </>
       )} 
-    <Child getData={getData} /> 
+      <Child getData={getData} />
       <Comments /> 
-     <Comments />
+      <Comments />
       <Counter /> 
        <Parent /> 
        <Parent1 /> */}
+      
       <Search />
     </div>
   );

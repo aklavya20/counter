@@ -1,36 +1,23 @@
-import { useEffect, useState } from "react";
-
-const Body = ({ value }) => {
-  const [data, setData] = useState([]);
-
-  const fetchData = async () => {
-    const url = "https://jsonplaceholder.typicode.com/users";
-    const res = await fetch(url);
-    const json = await res.json();
-    setData(json);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const filteredData = data.filter(
-    (ele) =>
-      ele.id.toString().includes(value) ||
-      ele.name.toLowerCase().includes(value) ||
-      ele.email.toLowerCase().includes(value)
-  );
-
+const Body = ({ datas }) => {
+  console.log(datas);
   return (
     <div>
-      {filteredData.map((ele) => (
+      {datas &&
+        datas.map((filteredData, index) => (
+          <div key={index}>
+            {/* <div>{filteredData.id}</div> */}
+            <div>{filteredData.name}</div>
+            {/* <div>{filteredData.email}</div> */}
+          </div>
+        ))}
+      {/* {datas.filteredData.map((ele) => (
         <div key={ele.id}>
           <div>{ele.id}</div>
           <div>{ele.name}</div>
           <div>{ele.email}</div>
           <br />
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
