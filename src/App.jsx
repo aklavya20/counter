@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Child from "./Child";
 // import Parent from "./Parent";
 // import Parent1 from "./Parent1";
-import Search from "./Search";
+//import Search from "./Search";
 
 const App = () => {
   function getData(data) {
@@ -34,14 +34,15 @@ const App = () => {
           <div>userData.address.zipcode</div>
         </>
       )} 
-      <Child getData={getData} />
+      
       <Comments /> 
       <Comments />
       <Counter /> 
        <Parent /> 
        <Parent1 /> */}
-      
-      <Search />
+
+      {/* <Search /> */}
+      <Child getData={getData} />
     </div>
   );
 };
